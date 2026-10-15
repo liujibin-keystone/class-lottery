@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5N 班级抽奖转盘</title>
+  <link rel="stylesheet" href="wheel.css" />
+  <style>
+    :root { --theme: #1b4f72; --theme-dark: #12364f; --accent: #d08a2f; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <small>五年级数学 · 课堂抽奖</small>
+      <h1>5N 班人名大转盘</h1>
+    </div>
+    <nav class="nav">
+      <a class="current" href="5N.html">5N</a>
+      <a href="5M.html">5M</a>
+      <a href="5K.html">5K</a>
+      <a href="5L.html">5L</a>
+    </nav>
+  </header>
+  <main class="stage">
+    <section class="wheel-wrap">
+      <div class="pointer" aria-hidden="true"></div>
+      <canvas id="wheel" width="620" height="620"></canvas>
+      <div class="actions">
+        <button id="spin" type="button">开始抽奖</button>
+        <button id="reset" type="button">重置</button>
+      </div>
+    </section>
+    <aside class="side">
+      <h2>抽奖记录</h2>
+      <div class="counts">
+        <span>剩余<b id="remain">0</b></span>
+        <span>已抽中<b id="drawnCount">0</b></span>
+      </div>
+      <div id="list" class="list"></div>
+    </aside>
+  </main>
+  <div class="overlay" id="overlay">
+    <div class="card">
+      <p>本轮抽中</p>
+      <h2 id="winner"></h2>
+      <button id="close" type="button">好的</button>
+    </div>
+  </div>
+  <script>
+    window.CLASS_ID = "5N";
+    window.CLASS_NAMES = ["蔡蕊仪","冯王星龙","付子泰","郭智杰","蒋宇荀","李威妮","李忻霏","梁浩元","刘珺遥","宋浩箐","屠浩宸","王舒涵","余缨含","袁禹承","张家灿","赵觅棠","朱恩可"];
+  </script>
+  <script src="wheel.js"></script>
+</body>
+</html>

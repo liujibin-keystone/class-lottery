@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>五年级课堂抽奖</title>
+  <link rel="stylesheet" href="wheel.css" />
+  <style>
+    .pick {
+      max-width: 920px;
+      margin: 8vh auto 0;
+      padding: 0 24px 48px;
+    }
+    .pick h1 { margin: 0 0 8px; font-size: 36px; }
+    .pick p { color: var(--muted); margin: 0 0 28px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .grid a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 150px;
+      padding: 22px;
+      border-radius: 22px;
+      text-decoration: none;
+      color: #fffdf8;
+      box-shadow: 0 12px 28px rgba(28,25,22,0.12);
+    }
+    .grid a strong { font-size: 42px; letter-spacing: 0.04em; }
+    .grid a span { opacity: 0.9; }
+    .n { background: #1b4f72; }
+    .m { background: #1a6b7a; }
+    .k { background: #b85c38; }
+    .l { background: #3d5a80; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="pick">
+    <small style="letter-spacing:.16em;color:var(--muted)">五年级数学</small>
+    <h1>课堂抽奖转盘</h1>
+    <p>点开对应班级，转盘每次抽出一名学生。抽过的人会暂时移出，点重置可全部回来。</p>
+    <div class="grid">
+      <a class="n" href="5N.html"><span>17 名学生</span><strong>5N</strong></a>
+      <a class="m" href="5M.html"><span>18 名学生</span><strong>5M</strong></a>
+      <a class="k" href="5K.html"><span>18 名学生</span><strong>5K</strong></a>
+      <a class="l" href="5L.html"><span>18 名学生</span><strong>5L</strong></a>
+    </div>
+  </div>
+</body>
+</html>
